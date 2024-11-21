@@ -1,10 +1,10 @@
+import "./index.css"
+import { BiLogoTelegram } from "react-icons/bi";
 export const App = () => {
-    const styles = {color: "white", backgroundColor: "teal", padding: "2rem"}
-
     return (
-        <div>
-            <h1 style={styles}>Inline Style</h1>
-        </div>
+        <section>
+            <BiLogoTelegram />
+        </section>
     )
 }
 
