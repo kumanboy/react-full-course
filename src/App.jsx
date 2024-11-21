@@ -1,11 +1,10 @@
-import UserList from "./components/UserList.jsx";
-import ProductList from "./components/ProductList.jsx";
-
 export const App = () => {
+    const styles = {color: "white", backgroundColor: "teal", padding: "2rem"}
+
     return (
-        <main>
-            <UserList/>
-            <ProductList/>
-        </main>
+        <div>
+            <h1 style={styles}>Inline Style</h1>
+        </div>
     )
 }
+
