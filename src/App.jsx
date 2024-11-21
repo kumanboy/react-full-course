@@ -1,13 +1,11 @@
-import Salomlashish from "./components/Salomlashish.jsx";
-import ProductInfo from "./components/ProductInfo.jsx";
-
+import UserList from "./components/UserList.jsx";
+import ProductList from "./components/ProductList.jsx";
 
 export const App = () => {
-
     return (
-        <div>
-            <Salomlashish/>
-            <ProductInfo/>
-        </div>
+        <main>
+            <UserList/>
+            <ProductList/>
+        </main>
     )
 }
