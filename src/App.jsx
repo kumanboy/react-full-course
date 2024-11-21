@@ -1,9 +1,13 @@
-import JsxRules from "./components/JSXRules.jsx";
+import Salomlashish from "./components/Salomlashish.jsx";
+import ProductInfo from "./components/ProductInfo.jsx";
+
 
 export const App = () => {
+
     return (
         <div>
-            <JsxRules />
+            <Salomlashish/>
+            <ProductInfo/>
         </div>
     )
 }
