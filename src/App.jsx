@@ -1,23 +1,20 @@
-const Move = () => {
-    function mouseMove(){
-        alert("MouseMove event ishladi")
-        console.log("MouseMove event ishladi")
-    }
-
-    return (
-        <p onMouseMove={mouseMove}>
-            viris purus graeco omittam adolescens movet maximus oporteat viverra efficiantur instructior sententiae
-            posidonium appareat quam pertinax sonet suas maximus alienum penatibus numquam unum congue posidonium
-            molestiae urna consectetur salutatus quidam
-        </p>
-    )
-}
+import Counter from "./components/Counter.jsx";
+import TodoList from "./components/TodoList.jsx";
+import Profile from "./components/Profile.jsx";
+import ShopingList from "./components/ShopingList.jsx";
 
 
 export const App = () => {
+
+
     return (
         <section>
-            <Move/>
+            <Counter/>
+            <TodoList/>
+            <Profile/>
+            <ShopingList/>
         </section>
     )
 }
+
+//TODO 2:35:57
