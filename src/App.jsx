@@ -1,20 +1,11 @@
-import Counter from "./components/Counter.jsx";
-import TodoList from "./components/TodoList.jsx";
-import Profile from "./components/Profile.jsx";
-import ShopingList from "./components/ShopingList.jsx";
-
+import Switcher from "./components/Switcher.jsx";
 
 export const App = () => {
 
-
-    return (
-        <section>
-            <Counter/>
-            <TodoList/>
-            <Profile/>
-            <ShopingList/>
-        </section>
-    )
+ return(
+     <div>
+        <Switcher/>
+     </div>
+ )
 }
 
-//TODO 2:35:57
