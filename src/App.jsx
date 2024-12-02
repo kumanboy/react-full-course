@@ -1,10 +1,9 @@
-import Switcher from "./components/Switcher.jsx";
+import FetchDataEffect from "./components/FetchDataEffect.jsx";
 
 export const App = () => {
-
  return(
      <div>
-        <Switcher/>
+         <FetchDataEffect/>
      </div>
  )
 }
