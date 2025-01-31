@@ -1,9 +1,9 @@
-import Counter from "./components/Counter.jsx";
+import TodoApp from "./components/TodoApp.jsx";
 
 export const App = () => {
 
     return (
-        <Counter/>
+        <TodoApp/>
     );
 };
 
