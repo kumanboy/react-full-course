@@ -1,20 +1,22 @@
 import { useRef, useState, useEffect } from "react";
 
-export default function App()  {
+export default function App() {
     const [count, setCount] = useState(0);
-    const prevCountRef = useRef(null);
+    const intervalRef = useRef(null); // Interval ID ni saqlash uchun ref
 
     useEffect(() => {
-        prevCountRef.current = count; // Har safar `count` o'zgarganda eski qiymatni saqlaydi
-    }, [count]);
+        intervalRef.current = setInterval(() => {
+            setCount((prevCount) => prevCount + 1);
+        }, 1000);
+
+        return () => clearInterval(intervalRef.current); // Komponent unmount bo‘lganda to‘xtatish
+    }, []);
 
     return (
         <div>
-            <p>Current Count: {count}</p>
-            <p>Previous Count: {prevCountRef.current}</p>
-            <button onClick={() => setCount(count + 1)}>Increase</button>
+            <h2>Count: {count}</h2>
+            <button onClick={() => clearInterval(intervalRef.current)}>Stop</button>
         </div>
     );
 };
-
 
