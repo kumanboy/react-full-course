@@ -1,9 +1,9 @@
-import TodoApp from "./components/TodoApp.jsx";
+import ShoppingCart from "./components/ShoppingCart.jsx";
 
 export const App = () => {
 
     return (
-        <TodoApp/>
+        <ShoppingCart/>
     );
 };
 
