@@ -1,16 +1,17 @@
-import {useCounter} from "./useCounter.js";
+import {useFetch} from "./useFetch.js";
 
 export default function App() {
-    const { count, increment, decrement, reset } = useCounter(5);
+    const { data, loading, error } = useFetch("https://jsonplaceholder.typicode.com/users");
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <div>
-            <p>Count: {count}</p>
-            <button onClick={increment}>+</button>
-            <button onClick={decrement}>-</button>
-            <button onClick={reset}>Reset</button>
-        </div>
+        <ul>
+            {data.map((user) => (
+                <li key={user.id}>{user.name}</li>
+            ))}
+        </ul>
     );
 };
-
 
