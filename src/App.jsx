@@ -1,26 +1,16 @@
-import { useRef, useState } from "react";
+import {useCounter} from "./useCounter.js";
 
 export default function App() {
-    const [message, setMessage] = useState("Waiting...");
-    const timeoutRef = useRef(null); // Timeout ID ni saqlash uchun ref
-
-    const startTimeout = () => {
-        timeoutRef.current = setTimeout(() => {
-            setMessage("Timeout finished!");
-        }, 5000);
-    };
-
-    const cancelTimeout = () => {
-        clearTimeout(timeoutRef.current); // Timeoutni to‘xtatish
-        setMessage("Timeout cancelled!");
-    };
+    const { count, increment, decrement, reset } = useCounter(5);
 
     return (
         <div>
-            <h2>{message}</h2>
-            <button onClick={startTimeout}>Start Timeout</button>
-            <button onClick={cancelTimeout}>Cancel Timeout</button>
+            <p>Count: {count}</p>
+            <button onClick={increment}>+</button>
+            <button onClick={decrement}>-</button>
+            <button onClick={reset}>Reset</button>
         </div>
     );
 };
+
 
