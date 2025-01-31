@@ -1,9 +1,18 @@
-import ShoppingCart from "./components/ShoppingCart.jsx";
+import  { useRef } from "react";
 
-export const App = () => {
+export  default function App () {
+    const inputRef = useRef(null); // useRef dan foydalanamiz
+
+    const focusInput = () => {
+        inputRef.current.focus(); // Inputni fokusga olib kelamiz
+        inputRef.current.value = "Iltimos ismingizni yozing"; // Inputga ertamiz
+    };
 
     return (
-        <ShoppingCart/>
+        <div>
+            <input ref={inputRef} type="text" placeholder="Enter something..." />
+            <button onClick={focusInput}>Focus Input</button>
+        </div>
     );
 };
 
