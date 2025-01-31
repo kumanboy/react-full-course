@@ -1,17 +1,7 @@
-import {useFetch} from "./useFetch.js";
+import {useId, useState} from "react";
 
-export default function App() {
-    const { data, loading, error } = useFetch("https://jsonplaceholder.typicode.com/users");
+export default function App(){
+    const stableId = useState(useId())[0]; // Faqat bir marta ID yaratish
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error.message}</p>;
-
-    return (
-        <ul>
-            {data.map((user) => (
-                <li key={user.id}>{user.name}</li>
-            ))}
-        </ul>
-    );
-};
-
+    return <p>My stable ID: {stableId}</p>;
+}
